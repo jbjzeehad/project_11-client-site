@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
     return (
-        <div>
+        <div className="min-h-screen">
+            <Helmet>
+                <title>Paw | LogIn</title>
+            </Helmet>
 
         </div>
     );

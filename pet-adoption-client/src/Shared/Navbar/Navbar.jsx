@@ -1,6 +1,7 @@
 import { FaPaw } from "react-icons/fa";
 import { BiDonateHeart } from "react-icons/bi";
 import { FiHome } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -11,14 +12,14 @@ const Navbar = () => {
                     <img src="https://i.ibb.co/MRmhWV6/petlogo.png" alt="" />
                 </div>
                 <div className="col-span-7 flex gap-8 items-center justify-center">
-                    <button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><FiHome></FiHome>Home</button>
+                    <Link to='/'><button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><FiHome></FiHome>Home</button></Link>
                     <button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><FaPaw></FaPaw>Pet Listing</button>
                     <button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><BiDonateHeart></BiDonateHeart>Donation</button>
                 </div>
                 <div className="col-span-4 flex items-center justify-end mr-8">
                     <div className="flex gap-8">
-                        <button className="p-2 text-2xl font-extrabold hover:border-2 hover:border-teal-800 hover:rounded-lg text-teal-700">LOG IN</button>
-                        <button className="p-2 text-2xl text-slate-100 rounded-lg font-bold hover:border-teal-800 hover:bg-transparent border-2 border-teal-800 hover:text-teal-700 bg-teal-800">Register</button>
+                        <Link to='/login'><button className="p-2 text-2xl font-extrabold hover:border-2 hover:border-teal-800 hover:rounded-lg text-teal-700">LOG IN</button></Link>
+                        <Link to='/signup'><button className="p-2 text-2xl text-slate-100 rounded-lg font-bold hover:border-teal-800 hover:bg-transparent border-2 border-teal-800 hover:text-teal-700 bg-teal-800">Register</button></Link>
                     </div>
                     {/* <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
