@@ -46,13 +46,12 @@ const Banner = () => {
                     <img src="https://i.ibb.co/k5sRHwY/banner2.png" alt="" />
                     <div className='absolute bottom-1/4 px-10 pt-16 left-20'  >
                         <h3 className='text-8xl text-slate-100 font-extrabold'>Make a <br />Donation <br />for Pet<br /> Happiness</h3>
-                        {/* <p className='mt-10 text-3xl mr-20 text-slate-100'>Take our interactive new quiz to find<br /> the perfect pet to adopt.</p> */}
                     </div>
                 </SwiperSlide>
 
             </Swiper>
             <div className='relative z-10 bottom-14 mx-28 '>
-                <div className='grid grid-cols-5 items-center justify-center bg-slate-100 rounded-3xl py-8 '>
+                <div className='grid grid-cols-5 items-center justify-center bg-slate-100 rounded-3xl py-8 shadow-lg shadow-slate-500'>
                     <button className=' text-2xl text-slate-900 font-semibold hover:text-teal-800'>Find a Cat</button>
                     <button className='border-l-2 text-2xl text-slate-900 font-semibold border-teal-900 hover:text-teal-800'>Find a Rabbit</button>
                     <div className=' flex justify-center '>
