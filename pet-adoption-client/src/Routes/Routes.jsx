@@ -7,6 +7,8 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import PetListing from "../Pages/PetListing/PetListing";
 import DonationCamp from "../Pages/DonationCamp/DonationCamp";
+import PrivateRoute from "./PrivateRoute";
+import DashBoard from "../Layout/DashBoard";
 
 
 export const router = createBrowserRouter([
@@ -36,4 +38,15 @@ export const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: 'dashboard',
+        element: <DashBoard></DashBoard>,
+
+        // <PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
+        children: [
+            {
+
+            }
+        ]
+    }
 ]);

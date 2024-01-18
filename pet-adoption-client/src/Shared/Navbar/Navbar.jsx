@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <>
-            <div className="fixed z-20 bg-opacity-95 bg-slate-100 grid grid-cols-12 py-5 max-w-screen-xl">
+            <div className="fixed z-20  bg-slate-100 grid grid-cols-12 py-5 max-w-screen-xl">
                 <div className="  col-span-1  ml-8 ">
                     <img src="https://i.ibb.co/MRmhWV6/petlogo.png" alt="" />
                 </div>
