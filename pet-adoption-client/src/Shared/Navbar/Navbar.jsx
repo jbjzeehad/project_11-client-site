@@ -13,8 +13,8 @@ const Navbar = () => {
                 </div>
                 <div className="col-span-7 flex gap-8 items-center justify-center">
                     <Link to='/'><button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><FiHome></FiHome>Home</button></Link>
-                    <button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><FaPaw></FaPaw>Pet Listing</button>
-                    <button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><BiDonateHeart></BiDonateHeart>Donation</button>
+                    <Link to='/petlist'><button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><FaPaw></FaPaw>Pet Listing</button></Link>
+                    <Link to="/dtncamp">  <button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><BiDonateHeart></BiDonateHeart>Donation</button></Link>
                 </div>
                 <div className="col-span-4 flex items-center justify-end mr-8">
                     <div className="flex gap-8">

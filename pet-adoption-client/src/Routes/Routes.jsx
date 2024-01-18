@@ -5,6 +5,8 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import PetListing from "../Pages/PetListing/PetListing";
+import DonationCamp from "../Pages/DonationCamp/DonationCamp";
 
 
 export const router = createBrowserRouter([
@@ -15,6 +17,14 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>
+            },
+            {
+                path: "petlist",
+                element: <PetListing></PetListing>
+            },
+            {
+                path: "dtncamp",
+                element: <DonationCamp></DonationCamp>
             },
             {
                 path: "login",
