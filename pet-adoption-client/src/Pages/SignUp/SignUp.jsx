@@ -2,18 +2,18 @@ import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 import { Parallax } from "react-parallax";
 import { useForm } from "react-hook-form"
-import publicAxios from "../../Hooks/publicAxios";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import { FaImage, FaLock, FaRegUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import UsePublicAxios from "../../Hooks/UsePublicAxios";
 
 
 const SignUp = () => {
 
-    const axiosPublic = publicAxios();
+    const axiosPublic = UsePublicAxios();
 
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -125,13 +125,6 @@ const SignUp = () => {
                     </form>
                 </div>
             </div>
-
-
-
-
-
-
-
         </>
     );
 };

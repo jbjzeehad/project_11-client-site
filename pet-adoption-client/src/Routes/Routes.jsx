@@ -7,7 +7,6 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import PetListing from "../Pages/PetListing/PetListing";
 import DonationCamp from "../Pages/DonationCamp/DonationCamp";
-import PrivateRoute from "./PrivateRoute";
 import DashBoard from "../Layout/DashBoard";
 import AddPet from "../Pages/AddPet/AddPet";
 import MyPets from "../Pages/MyPets/MyPets";
@@ -18,12 +17,16 @@ import AdoptionReq from "../Pages/AdoptionReq/AdoptionReq";
 import AllUsers from "../Pages/AllUsers/AllUsers";
 import AllPets from "../Pages/AllPets/AllPets";
 import AllDonation from "../Pages/AllDonation/AllDonation";
+import SiteError from "../Pages/ErrorPage/siteError";
+import PrivateRoute from "./PrivateRoute";
+import AdminRoute from "./AdminRoute";
 
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement: <SiteError></SiteError>,
         children: [
             {
                 path: "/",
@@ -49,9 +52,7 @@ export const router = createBrowserRouter([
     },
     {
         path: 'dashboard',
-        element: <DashBoard></DashBoard>,
-
-        // <PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
+        element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
         children: [
             //all user routes
             {
@@ -82,17 +83,17 @@ export const router = createBrowserRouter([
             //only admin routes
             {
                 path: 'allusers',
-                element: <AllUsers></AllUsers>
+                element: <AdminRoute> <AllUsers></AllUsers></AdminRoute>
 
             },
             {
                 path: 'allpets',
-                element: <AllPets></AllPets>
+                element: <AdminRoute> <AllPets></AllPets></AdminRoute>
 
             },
             {
                 path: 'alldonation',
-                element: <AllDonation></AllDonation>
+                element: <AdminRoute><AllDonation></AllDonation></AdminRoute>
 
             }
         ]

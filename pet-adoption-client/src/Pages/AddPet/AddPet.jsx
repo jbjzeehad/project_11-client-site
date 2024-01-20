@@ -1,9 +1,10 @@
+import DBError from "../ErrorPage/DBError";
 
 
 const AddPet = () => {
     return (
         <div>
-            <p>Pet is : Dog,cat,rabbit,fish</p>
+            <DBError></DBError>
         </div>
     );
 };
