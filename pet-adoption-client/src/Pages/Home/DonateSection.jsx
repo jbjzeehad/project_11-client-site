@@ -1,6 +1,7 @@
 import { GiRabbitHead } from "react-icons/gi";
 import { LuCat } from "react-icons/lu";
 import { TbDog } from "react-icons/tb";
+import { FaDonate } from "react-icons/fa";
 
 
 const DonateSection = () => {
@@ -14,41 +15,70 @@ const DonateSection = () => {
                 </div>
                 <p className="text-2xl font-bold hover:font-extrabold text-teal-800 self-end">Share Love &gt;</p>
             </div>
-            <div className="grid grid-cols-3 my-10 gap-5">
-                <div className="relative shadow-lg shadow-slate-500 rounded-3xl">
-                    <img className="rounded-3xl" src="https://i.ibb.co/cvkXVGc/card1.png" alt="" />
-                    <div className="absolute bottom-0 text-slate-800 bg-teal-50 w-full rounded-3xl grid justify-center text-center rounded-t-full py-3">
-                        <p className="text-3xl font-extrabold text-teal-900">Bruce</p>
-                        <p className="font-bold">3 years</p>
+
+
+
+
+            <div className="grid grid-cols-2 mt-10 gap-5">
+                <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
+                    <div>
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/ZNZZJ3H/don1.png" alt="" />
                     </div>
-                    <div className="absolute top-0 right-0 rounded-3xl">
-                        <button className=" border-b-2 border-l-2 border-teal-800 hover:border-4  rounded-3xl text-5xl text-slate-800 p-1"><TbDog></TbDog></button>
-                    </div>
-                </div>
-                <div>
-                    <div className="relative shadow-lg shadow-slate-500 rounded-3xl">
-                        <img className="rounded-3xl" src="https://i.ibb.co/mDKbPNQ/card2.png" alt="" />
-                        <div className="absolute bottom-0 text-slate-800 bg-teal-50 w-full rounded-3xl grid justify-center text-center rounded-t-full py-3">
-                            <p className="text-3xl font-extrabold text-teal-900">Chole</p>
-                            <p className="font-bold">2 Years</p>
-                        </div>
-                        <div className="absolute top-0 right-0 rounded-3xl">
-                            <button className="hover:border-4 border-b-2 border-l-2 border-teal-800  rounded-3xl text-5xl p-1"><LuCat></LuCat></button>
+                    <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
+                        <p className="text-2xl font-extrabold ">Paws for a Cause</p>
+                        <p className="font-bold my-2">Join Our Pet Donation Drive! Support will be directed towards adoption initiatives.</p>
+                        <div>
+                            <button className="rounded-full border border-teal-800 hover:border-2 text-xl text-slate-800 p-2"><FaDonate></FaDonate></button>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div className="relative shadow-lg shadow-slate-500 rounded-3xl">
-                        <img className="rounded-3xl" src="https://i.ibb.co/5M3yPhr/card3.png" alt="" />
-                        <div className="absolute bottom-0 text-slate-800 bg-teal-50 w-full rounded-3xl rounded-t-full grid justify-center py-3 text-center">
-                            <p className="text-3xl font-extrabold text-teal-900">Bella</p>
-                            <p className="font-bold">2 Years</p>
-                        </div>
-                        <div className="absolute top-0 right-0 rounded-3xl">
-                            <button className=" border-b-2 border-l-2 border-teal-800 hover:border-4  rounded-3xl text-5xl text-slate-800 p-1 "><GiRabbitHead></GiRabbitHead></button>
+                <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
+                    <div>
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/tbR7jmT/don2.png" alt="" />
+                    </div>
+                    <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
+                        <p className="text-2xl font-extrabold ">Paws for a Cause</p>
+                        <p className="font-bold my-2">Support will be directed towards adoption pets find loving families and permanent homes.</p>
+                        <div>
+                            <button className="rounded-full border border-teal-800 hover:border-2 text-xl text-slate-800 p-2"><FaDonate></FaDonate></button>
                         </div>
                     </div>
                 </div>
+                <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
+                    <div>
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/qBVVXBY/don3.png" alt="" />
+                    </div>
+                    <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
+                        <p className="text-2xl font-extrabold ">Paws for a Cause</p>
+                        <p className="font-bold my-2">Your donation will go towards providing essential medical care for injured or sick animals.</p>
+                        <div>
+                            <button className="rounded-full border border-teal-800 hover:border-2 text-xl text-slate-800 p-2"><FaDonate></FaDonate></button>
+                        </div>
+                    </div>
+                </div>
+                <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
+                    <div>
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/PTTqJ0J/don4.png" alt="" />
+                    </div>
+                    <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
+                        <p className="text-2xl font-extrabold ">Paws for a Cause</p>
+                        <p className="font-bold my-2">Funds will be used to supply nutritious food and shelter for pets awaiting their forever homes.</p>
+                        <div>
+                            <button className="rounded-full border border-teal-800 hover:border-2 text-xl text-slate-800 p-2"><FaDonate></FaDonate></button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </div>
     );

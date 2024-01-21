@@ -26,7 +26,7 @@ const PetFoodExtra = () => {
             <div className="col-span-3 ml-3 pt-5 px-8">
                 <p className="text-4xl text-slate-800 font-bold py-5">Pets Food</p>
                 <hr className="w-1/4 border-2 border-teal-900" />
-                <p className="text-5xl text-teal-950 font-extrabold py-5">Save an Extra 5-10% on Every Product Order</p>
+                <p className="text-6xl text-teal-950 font-extrabold py-5">Save an Extra 10% on Every Product Order</p>
                 <p className="text-2xl font-bold hover:font-extrabold text-teal-800">Buy Now &gt; </p>
             </div>
         </div>
