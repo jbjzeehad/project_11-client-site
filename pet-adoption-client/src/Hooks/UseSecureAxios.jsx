@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import useAuth from "./UseAuth";
+import UseAuth from "./UseAuth";
 
 
 
@@ -10,7 +10,7 @@ const axiosSecure = axios.create({
 
 const UseSecureAxios = () => {
     const navigate = useNavigate();
-    const { logout } = useAuth();
+    const { logout } = UseAuth();
 
     axiosSecure.interceptors.request.use(function (config) {
         const token = localStorage.getItem('access-token');

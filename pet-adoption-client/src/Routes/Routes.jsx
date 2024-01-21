@@ -52,7 +52,8 @@ export const router = createBrowserRouter([
     },
     {
         path: 'dashboard',
-        element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
+        element: <DashBoard></DashBoard>,
+        // <PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
         children: [
             //all user routes
             {
@@ -83,17 +84,20 @@ export const router = createBrowserRouter([
             //only admin routes
             {
                 path: 'allusers',
-                element: <AdminRoute> <AllUsers></AllUsers></AdminRoute>
+                element: <AllUsers></AllUsers>
+                // element: <AdminRoute> <AllUsers></AllUsers></AdminRoute>
 
             },
             {
                 path: 'allpets',
-                element: <AdminRoute> <AllPets></AllPets></AdminRoute>
+                element: <AllPets></AllPets>
+                // element: <AdminRoute> <AllPets></AllPets></AdminRoute>
 
             },
             {
                 path: 'alldonation',
-                element: <AdminRoute><AllDonation></AllDonation></AdminRoute>
+                element: <AllDonation></AllDonation>
+                // element: <AdminRoute><AllDonation></AllDonation></AdminRoute>
 
             }
         ]

@@ -8,8 +8,9 @@ import UseAdmin from "../Hooks/UseAdmin";
 
 
 const DashBoard = () => {
-    const { user, logOut } = useContext(AuthContext);
-    const [isAdmin] = UseAdmin();
+    const { logOut } = useContext(AuthContext);
+    // const [isAdmin] = UseAdmin();
+    let isAdmin = true;
 
     const handleLogOut = () => {
         logOut()
