@@ -19,7 +19,6 @@ const Home = () => {
             <PetFoodExtra></PetFoodExtra>
             <DonateSection></DonateSection>
             <AboutUs></AboutUs>
-
         </div>
     );
 };

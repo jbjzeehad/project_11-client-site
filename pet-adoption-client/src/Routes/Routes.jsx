@@ -20,6 +20,8 @@ import AllDonation from "../Pages/AllDonation/AllDonation";
 import SiteError from "../Pages/ErrorPage/siteError";
 import PrivateRoute from "./PrivateRoute";
 import AdminRoute from "./AdminRoute";
+import PetDetails from "../Pages/PetListing/PetDetails";
+import DonationCampDetails from "../Pages/DonationCamp/DonationCampDetails";
 
 
 export const router = createBrowserRouter([
@@ -37,8 +39,16 @@ export const router = createBrowserRouter([
                 element: <PetListing></PetListing>
             },
             {
+                path: "petdetails",
+                element: <PetDetails></PetDetails>
+            },
+            {
                 path: "dtncamp",
                 element: <DonationCamp></DonationCamp>
+            },
+            {
+                path: "dtncampdetails",
+                element: <DonationCampDetails></DonationCampDetails>
             },
             {
                 path: "login",

@@ -1,6 +1,3 @@
-import { GiRabbitHead } from "react-icons/gi";
-import { LuCat } from "react-icons/lu";
-import { TbDog } from "react-icons/tb";
 import { FaDonate } from "react-icons/fa";
 
 
@@ -15,10 +12,6 @@ const DonateSection = () => {
                 </div>
                 <p className="text-2xl font-bold hover:font-extrabold text-teal-800 self-end">Share Love &gt;</p>
             </div>
-
-
-
-
             <div className="grid grid-cols-2 mt-10 gap-5">
                 <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
                     <div>
@@ -68,17 +61,6 @@ const DonateSection = () => {
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
             </div>
         </div>
     );
