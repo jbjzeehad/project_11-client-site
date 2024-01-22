@@ -30,23 +30,23 @@ const AllPets = () => {
 
 
                         <tr>
-                            <th>index + 1</th>
+                            <th>1</th>
                             <td><div className="mask mask-squircle w-12 h-12">
                                 <img src="" />
                             </div></td>
                             <td>name</td>
                             <td>email</td>
                             <td>
-                                status
+                                adopt
 
                             </td>
                             <td>
-                                <button className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm" >
+                                <button className="border border-teal-800 hover:text-teal-800 px-4 py-1 rounded-lg text-sm" >
                                     <FaPaw></FaPaw>
                                 </button>
                             </td>
                             <td>
-                                <button className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm" >
+                                <button className="border border-yellow-800 hover:text-yellow-800 px-4 py-1 rounded-lg text-sm" >
                                     <FaRegEdit></FaRegEdit>
                                 </button>
                             </td>

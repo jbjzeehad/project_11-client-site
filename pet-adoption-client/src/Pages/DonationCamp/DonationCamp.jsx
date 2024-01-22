@@ -7,8 +7,7 @@ const DonationCamp = () => {
     return (
         <>
             <Helmet><title>Paw | Donation Camp</title></Helmet>
-            <div className="pt-28 min-h-screen px-10">
-                <p>All Donation : 12</p>
+            <div className="pt-32 min-h-screen px-10">
                 <div className="grid grid-cols-3">
                     <div className=" grid grid-cols-3 shadow-md shadow-slate-400 rounded-3xl">
                         <div>

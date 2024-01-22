@@ -69,7 +69,7 @@ const DashBoard = () => {
                     </ul>
 
                 </div>
-                <div className="flex-1 mt-28 rounded-3xl ml-56 p-8 min-h-screen bg-gradient-to-l from-slate-100 to-teal-50">
+                <div className="flex-1 mt-28 rounded-3xl ml-56 p-8 min-h-screen bg-teal-50">
                     <Outlet></Outlet>
                 </div>
             </div>

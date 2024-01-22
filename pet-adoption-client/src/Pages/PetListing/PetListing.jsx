@@ -1,15 +1,32 @@
 import { Helmet } from "react-helmet-async";
 import { FaPaw } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { SiPetsathome } from "react-icons/si";
 
 
 const PetListing = () => {
     return (
         <>
             <Helmet><title>Paw | PetList</title></Helmet>
-            <div className="pt-28 min-h-screen px-10">
-                <p>All Pets : 34</p>
-                <input type="text" placeholder="search" />
+            <div className="pt-36 min-h-screen px-10">
+                <div className="flex gap-5 ">
+                    <div className="flex items-center gap-5 mb-3">
+                        <SiPetsathome className="text-xl text-teal-800"></SiPetsathome>
+                        <input type="text" placeholder="Search" className=" py-2 border-b focus:border-b-2 outline-none text-slate-900 text-base font-medium bg-slate-100  border-teal-800 placeholder:text-slate-900" />
+                    </div>
+                    <div className="flex items-center gap-5 mb-3">
+                        <FaPaw className="text-lg text-teal-800"></FaPaw>
+                        <select defaultValue="default" className=" py-2  focus:border-b-2 outline-none text-slate-900 text-base font-medium bg-slate-100  border-teal-800 placeholder:text-slate-900">
+                            <option disabled value="default" selected>Pet Category</option>
+                            <option value="salad">Dog</option>
+                            <option value="pizza">Cat</option>
+                            <option value="Soup">Rabbit</option>
+                            <option value="Dessert">Fish</option>
+                            <option value="Drinks">Others</option>
+                        </select>
+                    </div>
+                </div>
+
                 <div className="grid grid-cols-3 my-3 gap-3">
                     <div className=" grid grid-cols-3 shadow-md shadow-slate-400 rounded-3xl">
                         <div>

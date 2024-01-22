@@ -7,6 +7,8 @@ import Swal from "sweetalert2";
 import { FaPaw } from "react-icons/fa";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { TiTick } from "react-icons/ti";
+import { RxCross2 } from "react-icons/rx";
 
 const AdoptionReq = () => {
     return (
@@ -19,40 +21,34 @@ const AdoptionReq = () => {
                             <th>SL No.</th>
                             <th>Profile</th>
                             <th>Name</th>
-                            <th>Category</th>
-                            <th>Status</th>
-                            <th>Adopt</th>
-                            <th>Update</th>
-                            <th>Delete</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Location</th>
+                            <th>Yes</th>
+                            <th>No</th>
                         </tr>
                     </thead>
                     <tbody className="text-slate-900">
 
 
                         <tr>
-                            <th>index + 1</th>
+                            <th>1</th>
                             <td><div className="mask mask-squircle w-12 h-12">
                                 <img src="" />
                             </div></td>
                             <td>name</td>
                             <td>email</td>
+                            <td>+880</td>
+                            <td>Dhaka</td>
                             <td>
-                                status
+                                <button className="border border-teal-800 hover:text-teal-800 px-4 py-1 rounded-lg text-base" >
+                                    <TiTick></TiTick>
+                                </button>
+                            </td>
 
-                            </td>
                             <td>
-                                <button className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm" >
-                                    <FaPaw></FaPaw>
-                                </button>
-                            </td>
-                            <td>
-                                <button className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm" >
-                                    <FaRegEdit></FaRegEdit>
-                                </button>
-                            </td>
-                            <td>
-                                <button className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm " >
-                                    <MdDelete></MdDelete>
+                                <button className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-base " >
+                                    <RxCross2></RxCross2>
                                 </button>
 
                             </td>
@@ -66,11 +62,11 @@ const AdoptionReq = () => {
                             <th>SL No.</th>
                             <th>Profile</th>
                             <th>Name</th>
-                            <th>Category</th>
-                            <th>Status</th>
-                            <th>Adopt</th>
-                            <th>Update</th>
-                            <th>Delete</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Location</th>
+                            <th>Yes</th>
+                            <th>No</th>
                         </tr>
                     </tfoot>
 
