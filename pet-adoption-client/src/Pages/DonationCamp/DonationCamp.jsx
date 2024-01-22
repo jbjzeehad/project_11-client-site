@@ -1,8 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { FaPaw } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
 import { FaSackDollar } from "react-icons/fa6";
-import { BiSolidBadgeDollar } from "react-icons/bi";
 import { FaHandHoldingDollar } from "react-icons/fa6";
 
 

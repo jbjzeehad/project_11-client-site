@@ -7,10 +7,11 @@ import { TbListDetails } from "react-icons/tb";
 import { CgDetailsLess } from "react-icons/cg";
 import { CgDetailsMore } from "react-icons/cg";
 
-
-const AddPet = () => {
+const UpdateMyCampaigns = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     return (
+
+
         <div>
             <div className="">
                 <form >
@@ -78,4 +79,4 @@ const AddPet = () => {
     );
 };
 
-export default AddPet;
+export default UpdateMyCampaigns;

@@ -1,3 +1,4 @@
+
 import { FaImage, FaLock, FaPaw, FaRegUser } from "react-icons/fa";
 import DBError from "../ErrorPage/DBError";
 import { useForm } from "react-hook-form"
@@ -8,7 +9,7 @@ import { CgDetailsLess } from "react-icons/cg";
 import { CgDetailsMore } from "react-icons/cg";
 
 
-const AddPet = () => {
+const UpdateMyPets = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     return (
         <div>
@@ -78,4 +79,4 @@ const AddPet = () => {
     );
 };
 
-export default AddPet;
+export default UpdateMyPets;
