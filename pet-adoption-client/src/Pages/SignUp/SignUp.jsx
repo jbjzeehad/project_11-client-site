@@ -8,12 +8,12 @@ import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import { FaImage, FaLock, FaRegUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import UsePublicAxios from "../../Hooks/UsePublicAxios";
+import UseAxiosPublic from "../../Hooks/UseAxiosPublic";
 
 
 const SignUp = () => {
 
-    const axiosPublic = UsePublicAxios();
+    const axiosPublic = UseAxiosPublic();
 
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();

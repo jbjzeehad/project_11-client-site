@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import UseSecureAxios from "../../Hooks/UseSecureAxios";
 import { FaUserGear } from "react-icons/fa6";
 import { FaUserShield } from "react-icons/fa6";
 import { FaUserSlash } from "react-icons/fa6";
 import Swal from "sweetalert2";
+import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 //////////////////////////////////////////////////////////////////
 // if i use tanstack query table
 // const userColumns = [
@@ -39,7 +39,7 @@ import Swal from "sweetalert2";
 
 const AllUsers = () => {
 
-    const axiosSecure = UseSecureAxios();
+    const axiosSecure = UseAxiosSecure();
     const { data: user = [], refetch } = useQuery({
         queryKey: ['user'],
         queryFn: async () => {

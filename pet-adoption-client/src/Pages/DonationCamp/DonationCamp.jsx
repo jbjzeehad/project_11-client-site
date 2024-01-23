@@ -15,7 +15,7 @@ const DonationCamp = () => {
                         </div>
                         <div className="col-span-2 text-slate-800 bg-teal-50 w-full rounded-r-3xl px-5 py-2">
                             <p className="text-3xl font-extrabold ">Bruce</p>
-                            <p className="text-xl my-3">3 years</p>
+                            <p className="text-xl my-3">Last Date</p>
                             <div className="flex justify-between my-4 items-center">
                                 <p className="flex items-center text-base gap-3"><FaSackDollar></FaSackDollar>3000</p>
                                 <p className="flex items-center text-lg gap-2"><FaHandHoldingDollar></FaHandHoldingDollar>500</p>
@@ -29,7 +29,7 @@ const DonationCamp = () => {
                         </div>
                         <div className="col-span-2 text-slate-800 bg-teal-50 w-full rounded-r-3xl px-5 py-2">
                             <p className="text-3xl font-extrabold ">Chole</p>
-                            <p className="text-xl my-3">2 years</p>
+                            <p className="text-xl my-3">Last Date</p>
                             <div className="flex justify-between my-4 items-center">
                                 <p className="flex items-center text-base gap-3"><FaSackDollar></FaSackDollar>5000</p>
                                 <p className="flex items-center text-lg gap-2"><FaHandHoldingDollar></FaHandHoldingDollar>3500</p>
@@ -43,7 +43,7 @@ const DonationCamp = () => {
                         </div>
                         <div className="col-span-2 text-slate-800 bg-teal-50 w-full rounded-r-3xl px-5 py-2">
                             <p className="text-3xl font-extrabold ">Bella</p>
-                            <p className="text-xl my-3">1 year</p>
+                            <p className="text-xl my-3">Last Date</p>
                             <div className="flex justify-between my-4 items-center">
                                 <p className="flex items-center text-base gap-3"><FaSackDollar></FaSackDollar>2000</p>
                                 <p className="flex items-center text-lg gap-2"><FaHandHoldingDollar></FaHandHoldingDollar>1870</p>

@@ -43,6 +43,7 @@ export const router = createBrowserRouter([
             {
                 path: "petdetails",
                 element: <PetDetails></PetDetails>
+
             },
             {
                 path: "dtncamp",
@@ -77,8 +78,11 @@ export const router = createBrowserRouter([
                 element: <MyPets></MyPets>
             },
             {
-                path: 'updatemypets',
-                element: <UpdateMyPets></UpdateMyPets>
+                path: 'updatemypets/:id',
+                element: <UpdateMyPets></UpdateMyPets>,
+                loader: ({ params }) => fetch(`http://localhost:5000/pets/${params.id}`)
+
+
             },
             {
                 path: 'mydonation',

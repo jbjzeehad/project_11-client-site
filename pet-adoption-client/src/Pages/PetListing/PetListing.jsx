@@ -17,12 +17,12 @@ const PetListing = () => {
                     <div className="flex items-center gap-5 mb-3">
                         <FaPaw className="text-lg text-teal-800"></FaPaw>
                         <select defaultValue="default" className=" py-2  focus:border-b-2 outline-none text-slate-900 text-base font-medium bg-slate-100  border-teal-800 placeholder:text-slate-900">
-                            <option disabled value="default" selected>Pet Category</option>
-                            <option value="salad">Dog</option>
-                            <option value="pizza">Cat</option>
-                            <option value="Soup">Rabbit</option>
-                            <option value="Dessert">Fish</option>
-                            <option value="Drinks">Others</option>
+                            <option disabled value="default">Pet Category</option>
+                            <option value="Dog">Dog</option>
+                            <option value="Cat">Cat</option>
+                            <option value="Rabbit">Rabbit</option>
+                            <option value="Fish">Fish</option>
+                            <option value="Others">Others</option>
                         </select>
                     </div>
                 </div>

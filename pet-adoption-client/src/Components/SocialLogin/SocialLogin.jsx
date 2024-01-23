@@ -2,12 +2,12 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
-import UsePublicAxios from "../../Hooks/UsePublicAxios";
+import UseAxiosPublic from "../../Hooks/UseAxiosPublic";
 
 
 const SocialLogin = () => {
     const { googleSignIn } = useAuth();
-    const axiosPublic = UsePublicAxios();
+    const axiosPublic = UseAxiosPublic();
     const navigate = useNavigate();
 
     const handleGoogleSignIn = () => {

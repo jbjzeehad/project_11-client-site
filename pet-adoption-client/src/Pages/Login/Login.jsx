@@ -24,6 +24,9 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
+                if (user.role === 'ban') {
+                    console.log('This User Banned');
+                }
                 console.log(user);
                 Swal.fire({
                     position: "top-end",

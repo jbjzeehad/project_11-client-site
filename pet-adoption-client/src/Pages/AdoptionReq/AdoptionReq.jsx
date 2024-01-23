@@ -1,12 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
-import UseSecureAxios from "../../Hooks/UseSecureAxios";
-import { FaUserGear } from "react-icons/fa6";
-import { FaUserShield } from "react-icons/fa6";
-import { FaUserSlash } from "react-icons/fa6";
-import Swal from "sweetalert2";
-import { FaPaw } from "react-icons/fa";
-import { FaRegEdit } from "react-icons/fa";
-import { MdDelete } from "react-icons/md";
+
 import { TiTick } from "react-icons/ti";
 import { RxCross2 } from "react-icons/rx";
 

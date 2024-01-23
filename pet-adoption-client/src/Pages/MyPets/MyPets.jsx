@@ -1,14 +1,49 @@
-import { useQuery } from "@tanstack/react-query";
-import UseSecureAxios from "../../Hooks/UseSecureAxios";
-import { FaUserGear } from "react-icons/fa6";
-import { FaUserShield } from "react-icons/fa6";
-import { FaUserSlash } from "react-icons/fa6";
-import Swal from "sweetalert2";
+
 import { FaPaw } from "react-icons/fa";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
+import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const MyPets = () => {
+    const { user } = useContext(AuthContext);
+    const axiosSecure = UseAxiosSecure();
+    const { data: pets = [], refetch } = useQuery({
+        queryKey: ['pets'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/pets');
+            return res.data;
+        }
+    });
+    const handleDeletePet = pet => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You want to delete?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axiosSecure.delete(`/pets/${pet._id}`)
+                    .then(res => {
+                        if (res.data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "This Pet has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
+            }
+        });
+    }
+
     return (
         <>
             <div className="">
@@ -26,31 +61,39 @@ const MyPets = () => {
                         </tr>
                     </thead>
                     <tbody className="text-slate-900">
-                        <tr>
-                            <th>1</th>
-                            <td><div className="mask mask-squircle w-12 h-12">
-                                <img src="" />
-                            </div></td>
-                            <td>name</td>
-                            <td>category</td>
-                            <td>adopt</td>
-                            <td>
-                                <button className="border border-teal-800 hover:text-teal-800 px-4 py-1 rounded-lg text-sm" >
-                                    <FaPaw></FaPaw>
-                                </button>
-                            </td>
-                            <td>
-                                <button className="border border-yellow-800 hover:text-yellow-800 px-4 py-1 rounded-lg text-sm" >
-                                    <FaRegEdit></FaRegEdit>
-                                </button>
-                            </td>
-                            <td>
-                                <button className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm " >
-                                    <MdDelete></MdDelete>
-                                </button>
+                        {
+                            pets.filter(mypets => mypets.email === user.email).map((pets, index) =>
+                                <tr key={pets._id}>
+                                    <th>{index + 1}</th>
+                                    <td className="flex justify-center"><div className="mask mask-squircle w-12 h-12">
+                                        <img src={pets.image} />
+                                    </div></td>
+                                    <td>{pets.name}</td>
+                                    <td>{pets.category}</td>
+                                    <td>{pets.adopted === false ? "Not Adopted" : "Adopted"}</td>
+                                    <td>
+                                        <button className="border border-teal-800 hover:text-teal-800 px-4 py-1 rounded-lg text-sm" >
+                                            <FaPaw></FaPaw>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button className="border border-yellow-800 hover:text-yellow-800 px-4 py-1 rounded-lg text-sm" >
+                                            <FaRegEdit></FaRegEdit>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button onClick={() => handleDeletePet(pets)} className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm " >
+                                            <MdDelete></MdDelete>
+                                        </button>
 
-                            </td>
-                        </tr>
+                                    </td>
+                                </tr>
+
+                            )
+
+
+                        }
+
                     </tbody>
                     {/* foot */}
                     <tfoot className="bg-slate-100 text-sm rounded-2xl">
