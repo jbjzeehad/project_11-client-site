@@ -16,34 +16,7 @@ const AllPets = () => {
         }
     });
 
-    const handleAdoption = pets => {
-        Swal.fire({
-            title: "Are you sure?",
-            text: "I want to Adopt",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                axiosSecure.patch(`/pets/${pets._id}`)
-                    .then(res => {
-                        console.log(res.data);
-                        if (res.data.modifiedCount > 0) {
-                            refetch();
-                            Swal.fire({
-                                position: "top-end",
-                                icon: "success",
-                                title: 'Adopted',
-                                showConfirmButton: false,
-                                timer: 1500
-                            });
-                        }
-                    })
-            }
-        })
-    }
+
 
     const handleDeletePet = pet => {
         Swal.fire({
@@ -98,14 +71,15 @@ const AllPets = () => {
                                     </div></td>
                                     <td>{pets.name}</td>
                                     <td>{pets.category}</td>
-                                    <td>{pets.adopted === false ? "Not Adopted" : "Adopted"}</td>
-                                    <td>{pets.adopted === false ? <button onClick={() => { handleAdoption(pets) }} className="border border-teal-800 hover:text-teal-800 px-4 py-1 rounded-lg text-sm" >
+                                    <td>{pets.adopted === 'false' ? "Not Adopted" : "Adopted"}</td>
+                                    <td>{pets.adopted === 'false' ? <button onClick={() => { handleAdoption(pets) }} className="border border-teal-800 hover:text-teal-800 px-4 py-1 rounded-lg text-sm" >
                                         <FaPaw></FaPaw>
                                     </button> :
                                         <button disabled className="  text-teal-800 px-4 py-1 rounded-lg text-sm" >
                                             <FaPaw></FaPaw>
                                         </button>
                                     }
+
 
                                     </td>
                                     <td>

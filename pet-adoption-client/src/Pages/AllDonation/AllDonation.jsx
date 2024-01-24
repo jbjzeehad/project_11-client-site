@@ -16,7 +16,7 @@ const AllDonation = () => {
         }
     });
 
-    const handlePauseDon = donations => {
+    const handlePauseDon = don => {
         Swal.fire({
             title: "Are you sure?",
             text: "I want to pause the campaign",
@@ -27,7 +27,7 @@ const AllDonation = () => {
             confirmButtonText: "Yes"
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosSecure.patch(`/donations/${donations._id}`)
+                axiosSecure.patch(`/donations/${don._id}`)
                     .then(res => {
                         console.log(res.data);
                         if (res.data.modifiedCount > 0) {
@@ -45,7 +45,7 @@ const AllDonation = () => {
         })
     }
 
-    const handleDeleteDon = donations => {
+    const handleDeleteDon = donat => {
         Swal.fire({
             title: "Are you sure?",
             text: "You want to delete?",
@@ -56,7 +56,7 @@ const AllDonation = () => {
             confirmButtonText: "Yes"
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosSecure.delete(`/donations/${donations._id}`)
+                axiosSecure.delete(`/donations/${donat._id}`)
                     .then(res => {
                         if (res.data.deletedCount > 0) {
                             refetch();
@@ -106,15 +106,19 @@ const AllDonation = () => {
                                         }
                                     </td>
                                     <td>
+
                                         <button className="border border-yellow-800 hover:text-yellow-800 px-4 py-1 rounded-lg text-sm" >
                                             <FaRegEdit></FaRegEdit>
                                         </button>
                                     </td>
                                     <td>
-                                        <button onClick={handleDeleteDon(donations)} className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm " >
-                                            <MdDelete></MdDelete>
-                                        </button>
+                                        {
 
+
+                                            <button className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm " >
+                                                <MdDelete></MdDelete>
+                                            </button>
+                                        }
                                     </td>
 
                                 </tr>

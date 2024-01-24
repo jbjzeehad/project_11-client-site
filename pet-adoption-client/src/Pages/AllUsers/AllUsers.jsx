@@ -130,9 +130,10 @@ const AllUsers = () => {
                             user.map((user, index) =>
                                 <tr key={user._id}>
                                     <th>{index + 1}</th>
-                                    <td><div className="mask mask-squircle w-12 h-12">
+                                    <td className="flex justify-center"><div className="mask mask-squircle w-12 h-12">
                                         <img src={user.image} />
-                                    </div></td>
+                                    </div>
+                                    </td>
                                     <td>{user.name}</td>
                                     <td>{user.email}</td>
                                     <td>{user.role === 'admin' ? <span className="text-2xl text-teal-800 flex justify-center"><FaUserShield></FaUserShield></span> :

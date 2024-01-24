@@ -4,15 +4,19 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Parallax } from "react-parallax";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import { FaLock } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 
 
 const Login = () => {
+    const [loginError, setLoginError] = useState('');
+
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+
+
 
     const from = location.state?.from?.pathname || '/';
 
@@ -21,6 +25,7 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
+        setLoginError('');
         signIn(email, password)
             .then(result => {
                 const user = result.user;
@@ -38,6 +43,11 @@ const Login = () => {
                     replace: true
                 });
             })
+            .catch(error => {
+                console.error(error.message);
+                setLoginError("Doesn't Match");
+            })
+
     }
 
     const bgimg = "https://i.ibb.co/2ySCgMQ/banner3.png";
@@ -70,9 +80,14 @@ const Login = () => {
                                     <FaLock className="text-4xl text-teal-800"></FaLock>
                                     <input type="password" name="password" placeholder="Password" className=" py-3 border-b-2 focus:border-b-4 outline-none text-slate-900 text-3xl font-medium bg-slate-100  border-teal-800 placeholder:text-slate-900" required />
                                 </div>
+                                {
+                                    loginError &&
+                                    <p className="text-red-500">Invalid User or Wrong Password</p>
+                                }
                             </div>
 
                             <div className=" mt-6">
+
                                 <input className="py-2 px-3 text-2xl text-slate-100 rounded-lg font-bold hover:border-teal-800 hover:bg-transparent border-2 border-teal-800 hover:text-teal-700 bg-teal-800" type="submit" value="Login" />
                             </div>
                         </form>

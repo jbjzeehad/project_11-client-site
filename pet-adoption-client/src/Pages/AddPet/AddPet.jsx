@@ -43,7 +43,7 @@ const AddPet = () => {
                 image: res.data.data.display_url,
                 time: data.image[0].lastModifiedDate,
                 email: user.email,
-                adopted: false
+                adopted: 'false'
             }
 
             const addPetList = await axiosSecure.post('/pets', addPet);

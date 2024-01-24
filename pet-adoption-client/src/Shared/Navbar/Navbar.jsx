@@ -1,18 +1,20 @@
 import { FaPaw } from "react-icons/fa";
 import { BiDonateHeart } from "react-icons/bi";
 import { FiHome } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleLogOut = () => {
         logOut()
             .then(() => {
                 console.log('logout user');
+                navigate('/');
             })
             .catch(error => console.log(error));
     }
@@ -41,11 +43,11 @@ const Navbar = () => {
                                     </div>
                                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-slate-100 rounded-box w-52">
                                         <li><NavLink to='/dashboard'>
-                                            <button className="justify-between text-slate-950 text-lg font-bold">
+                                            <button className="justify-between text-teal-700 text-lg font-bold">
                                                 DashBoard
                                             </button></NavLink>
                                         </li>
-                                        <li><button className="text-slate-950 text-lg font-bold" onClick={handleLogOut}>Logout</button></li>
+                                        <li><button className="text-teal-700 text-lg font-bold" onClick={handleLogOut}>Logout</button></li>
                                     </ul>
                                 </div>
                             </> : <>

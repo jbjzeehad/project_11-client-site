@@ -41,8 +41,9 @@ export const router = createBrowserRouter([
                 element: <PetListing></PetListing>
             },
             {
-                path: "petdetails",
-                element: <PetDetails></PetDetails>
+                path: "petdetails/:id",
+                element: <PetDetails></PetDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/pets/${params.id}`)
 
             },
             {
@@ -50,8 +51,9 @@ export const router = createBrowserRouter([
                 element: <DonationCamp></DonationCamp>
             },
             {
-                path: "dtncampdetails",
-                element: <DonationCampDetails></DonationCampDetails>
+                path: "dtncampdetails/:id",
+                element: <DonationCampDetails></DonationCampDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/donations/${params.id}`)
             },
             {
                 path: "login",
@@ -81,8 +83,6 @@ export const router = createBrowserRouter([
                 path: 'updatemypets/:id',
                 element: <UpdateMyPets></UpdateMyPets>,
                 loader: ({ params }) => fetch(`http://localhost:5000/pets/${params.id}`)
-
-
             },
             {
                 path: 'mydonation',
@@ -94,8 +94,9 @@ export const router = createBrowserRouter([
                 element: <MyCampaigns></MyCampaigns>
             },
             {
-                path: 'updatemycampaigns',
-                element: <UpdateMyCampaigns></UpdateMyCampaigns>
+                path: 'updatemycampaigns/:id',
+                element: <UpdateMyCampaigns></UpdateMyCampaigns>,
+                loader: ({ params }) => fetch(`http://localhost:5000/donations/${params.id}`)
             },
             {
                 path: 'createcampaign',
