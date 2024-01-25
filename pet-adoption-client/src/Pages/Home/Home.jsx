@@ -5,9 +5,15 @@ import Category from "./Category";
 import PetFoodExtra from "./PetFoodExtra";
 import DonateSection from "./DonateSection";
 import AboutUs from "./AboutUs";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
+import Swal from "sweetalert2";
 
 
 const Home = () => {
+
     return (
         <div>
             <Helmet>

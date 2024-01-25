@@ -72,7 +72,7 @@ const MyCampaigns = () => {
                                     <th>{index + 1}</th>
                                     <td>{donations.name}</td>
                                     <td>${donations.maxdonation}</td>
-                                    <td><progress className="progress progress-success" value={1000} max={donations.maxdonation}></progress></td>
+                                    <td><progress className="progress progress-success" value={100} max={donations.maxdonation}></progress></td>
                                     <td>
                                         <button className="border border-teal-800 hover:text-teal-800 px-4 py-1 rounded-lg text-sm" >
                                             <BiDonateHeart></BiDonateHeart>

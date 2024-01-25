@@ -106,7 +106,7 @@ const AdoptionReq = () => {
                                         <img src={adoption.petimage} />
                                     </div></td>
                                     <td>{adoption.adpname}</td>
-                                    <td>{user.email}</td>
+                                    <td>{adoption.adpemail}</td>
                                     <td>{adoption.adpnumber}</td>
                                     <td>{adoption.adpaddress}</td>
                                     <td>

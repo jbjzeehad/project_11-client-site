@@ -7,9 +7,14 @@ import { FaLock } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
 
 
 const Login = () => {
+    /////////////////////////////////////ban check
+
+    //////////////////////////////////////
     const [loginError, setLoginError] = useState('');
 
     const { signIn } = useContext(AuthContext);
@@ -29,9 +34,6 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                if (user.role === 'ban') {
-                    console.log('This User Banned');
-                }
                 console.log(user);
                 Swal.fire({
                     position: "top-end",
@@ -47,8 +49,8 @@ const Login = () => {
                 console.error(error.message);
                 setLoginError("Doesn't Match");
             })
-
     }
+
 
     const bgimg = "https://i.ibb.co/2ySCgMQ/banner3.png";
 

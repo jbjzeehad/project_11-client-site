@@ -67,20 +67,7 @@ const PetListing = () => {
 
                         )
                     }
-                    <div className=" grid grid-cols-3 shadow-md shadow-slate-400 rounded-3xl">
-                        <div>
-                            <img className=" rounded-l-3xl" src="https://i.ibb.co/k0DRKpv/dog1.png" alt="" />
-                        </div>
-                        <div className="col-span-2 text-slate-800 bg-teal-50 w-full rounded-r-3xl px-5 py-2">
-                            <p className="text-3xl font-extrabold ">Bruce</p>
-                            <p className="text-xl my-3">3 years</p>
-                            <div className="flex justify-between my-4 items-center">
-                                <p className="flex items-center text-lg gap-3"><FaPaw></FaPaw>Dog</p>
-                                <p className="flex items-center text-lg gap-3"><FaLocationDot></FaLocationDot>Dhaka</p>
-                            </div>
-                            <button className="w-full rounded-lg border border-teal-800 hover:border-2 text-base font-bold text-slate-800 px-3 py-1">Details</button>
-                        </div>
-                    </div>
+
 
 
                 </div>

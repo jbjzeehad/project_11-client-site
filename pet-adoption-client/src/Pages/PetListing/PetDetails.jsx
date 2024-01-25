@@ -86,18 +86,26 @@ const PetDetails = () => {
                                 <div className="grid  gap-3 m-2">
                                     <span className="font-bold  text-slate-900 text-xl">Name</span>
                                     <input type="text" {...register("adpname", { required: true })} defaultValue={user.displayName} placeholder="" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none" />
+
                                 </div>
                                 <div className="grid  gap-3 m-2">
                                     <span className="font-bold  text-slate-900 text-xl">Email</span>
                                     <input type="text" {...register("adpemail", { required: true })} defaultValue={user.email} placeholder="" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none" />
+
                                 </div>
                                 <div className="grid  gap-3 m-2">
                                     <span className="font-bold  text-slate-900 text-xl">Phone Number</span>
                                     <input type="text" {...register("adpnumber", { required: true })} placeholder="" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none" />
+                                    {errors.adpnumber && (
+                                        <p>number is required</p>
+                                    )}
                                 </div>
                                 <div className="grid  gap-3 m-2">
                                     <span className="font-bold  text-slate-900 text-xl">Address</span>
                                     <input type="text" {...register("adpaddress", { required: true })} placeholder="" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none" />
+                                    {errors.adpaddress && (
+                                        <p>address is required</p>
+                                    )}
                                 </div>
                                 <button className="border border-teal-800 mx-2 mt-2 py-2 px-3 rounded-lg text-slate-900 hover:bg-teal-800 hover:text-slate-100 ">SUBMIT</button>
                             </form>
