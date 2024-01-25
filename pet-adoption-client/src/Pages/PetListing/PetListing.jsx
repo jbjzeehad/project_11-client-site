@@ -5,6 +5,7 @@ import { SiPetsathome } from "react-icons/si";
 import UseAxiosPublic from "../../Hooks/UseAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 import { NavLink } from "react-router-dom";
+import { LuClock } from "react-icons/lu";
 
 
 
@@ -45,11 +46,15 @@ const PetListing = () => {
                         pets.filter(ntadpt => ntadpt.adopted === 'false').map((pets) =>
                             <div key={pets._id} className=" grid grid-cols-3 shadow-md shadow-slate-400 rounded-3xl">
                                 <div>
-                                    <img className=" rounded-l-3xl" src={pets.image} alt="" />
+                                    <img className="h-full rounded-l-3xl" src={pets.image} alt="" />
                                 </div>
                                 <div className="col-span-2 text-slate-800 bg-teal-50 w-full rounded-r-3xl px-5 py-2">
                                     <p className="text-3xl font-extrabold ">{pets.name}</p>
-                                    <p className="text-xl my-3">{pets.age} Years</p>
+                                    <div className="my-3 flex justify-between">
+                                        <p className="text-lg ">{pets.age} Years</p>
+                                        <p className="text-base flex items-center gap-2"><LuClock></LuClock>{pets.time.split('T')[0]}</p>
+                                    </div>
+
                                     <div className="flex justify-between my-4 items-center">
                                         <p className="flex items-center text-lg gap-3"><FaPaw></FaPaw>{pets.category}</p>
                                         <p className="flex items-center text-lg gap-3"><FaLocationDot></FaLocationDot>{pets.location}</p>
@@ -76,34 +81,8 @@ const PetListing = () => {
                             <button className="w-full rounded-lg border border-teal-800 hover:border-2 text-base font-bold text-slate-800 px-3 py-1">Details</button>
                         </div>
                     </div>
-                    <div className=" grid grid-cols-3 shadow-md shadow-slate-400 rounded-3xl">
-                        <div>
-                            <img className=" rounded-l-3xl" src="https://i.ibb.co/5BhfV28/cat1.png" alt="" />
-                        </div>
-                        <div className="col-span-2 text-slate-800 bg-teal-50 w-full rounded-r-3xl px-5 py-2">
-                            <p className="text-3xl font-extrabold ">Chole</p>
-                            <p className="text-xl my-3">2 years</p>
-                            <div className="flex justify-between my-4 items-center">
-                                <p className="flex items-center text-lg gap-3"><FaPaw></FaPaw>Cat</p>
-                                <p className="flex items-center text-lg gap-3"><FaLocationDot></FaLocationDot>Khulna</p>
-                            </div>
-                            <button className="w-full rounded-lg border border-teal-800 hover:border-2 text-base font-bold text-slate-800 px-3 py-1">Details</button>
-                        </div>
-                    </div>
-                    <div className=" grid grid-cols-3 shadow-md shadow-slate-400 rounded-3xl">
-                        <div>
-                            <img className=" rounded-l-3xl" src="https://i.ibb.co/P9f8Jgg/rabbit1.png" alt="" />
-                        </div>
-                        <div className="col-span-2 text-slate-800 bg-teal-50 w-full rounded-r-3xl px-5 py-2">
-                            <p className="text-3xl font-extrabold ">Bella</p>
-                            <p className="text-xl my-3">1 year</p>
-                            <div className="flex justify-between my-4 items-center">
-                                <p className="flex items-center text-lg gap-3"><FaPaw></FaPaw>Rabbit</p>
-                                <p className="flex items-center text-lg gap-3"><FaLocationDot></FaLocationDot>Sylhet</p>
-                            </div>
-                            <button className="w-full rounded-lg border border-teal-800 hover:border-2 text-base font-bold text-slate-800 px-3 py-1">Details</button>
-                        </div>
-                    </div>
+
+
                 </div>
             </div>
         </>

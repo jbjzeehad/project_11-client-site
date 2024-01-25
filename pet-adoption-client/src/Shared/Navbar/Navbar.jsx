@@ -23,7 +23,7 @@ const Navbar = () => {
         <>
             <div className="fixed z-20  bg-slate-100 grid grid-cols-12 py-5 max-w-screen-xl">
                 <div className="  col-span-1  ml-8 ">
-                    <img src="https://i.ibb.co/MRmhWV6/petlogo.png" alt="" />
+                    <img src="../../../public/petlogo.png" alt="" />
                 </div>
                 <div className="col-span-7 flex gap-8 items-center justify-center">
                     <NavLink to='/'><button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><FiHome></FiHome>Home</button></NavLink>

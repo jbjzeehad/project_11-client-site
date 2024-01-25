@@ -5,6 +5,7 @@ import { MdOutlinePause } from "react-icons/md";
 import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import Swal from "sweetalert2";
+import { NavLink } from "react-router-dom";
 
 const AllDonation = () => {
     const axiosSecure = UseAxiosSecure();
@@ -16,10 +17,10 @@ const AllDonation = () => {
         }
     });
 
-    const handlePauseDon = don => {
+    const handlePauseDon = async (don) => {
         Swal.fire({
             title: "Are you sure?",
-            text: "I want to pause the campaign",
+            text: "Stop the Donation",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
@@ -27,15 +28,26 @@ const AllDonation = () => {
             confirmButtonText: "Yes"
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosSecure.patch(`/donations/${don._id}`)
+                const updateDon = {
+                    name: don.name,
+                    maxdonation: don.maxdonation,
+                    lastdate: don.lastdate,
+                    shortdescription: don.shortdescription,
+                    longdescription: don.longdescription,
+                    image: don.image,
+                    time: don.time,
+                    email: don.email,
+                    donstatus: "false"
+                }
+                const donUpdated = axiosSecure.put(`/donations/${don._id}`, updateDon)
                     .then(res => {
-                        console.log(res.data);
+                        console.log(donUpdated.data);
                         if (res.data.modifiedCount > 0) {
                             refetch();
                             Swal.fire({
                                 position: "top-end",
                                 icon: "success",
-                                title: 'Campaign Paused',
+                                title: 'Paused',
                                 showConfirmButton: false,
                                 timer: 1500
                             });
@@ -43,6 +55,7 @@ const AllDonation = () => {
                     })
             }
         })
+
     }
 
     const handleDeleteDon = donat => {
@@ -107,15 +120,16 @@ const AllDonation = () => {
                                     </td>
                                     <td>
 
-                                        <button className="border border-yellow-800 hover:text-yellow-800 px-4 py-1 rounded-lg text-sm" >
+                                        <NavLink to={`/dashboard/updatemycampaigns/${donations._id}`}>   <button className="border border-yellow-800 hover:text-yellow-800 px-4 py-1 rounded-lg text-sm" >
                                             <FaRegEdit></FaRegEdit>
                                         </button>
+                                        </NavLink>
                                     </td>
                                     <td>
                                         {
 
 
-                                            <button className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm " >
+                                            <button onClick={() => handleDeleteDon(donations)} className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm " >
                                                 <MdDelete></MdDelete>
                                             </button>
                                         }

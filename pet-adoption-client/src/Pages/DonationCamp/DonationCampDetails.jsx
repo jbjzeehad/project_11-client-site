@@ -16,6 +16,10 @@ const DonationCampDetails = () => {
     console.log(user);
     const { register, handleSubmit } = useForm();
 
+    const onsubmit = () => {
+        console.log("ok");
+    }
+
 
     return (
         <>

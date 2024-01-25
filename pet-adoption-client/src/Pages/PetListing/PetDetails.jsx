@@ -13,34 +13,42 @@ import { useForm } from "react-hook-form";
 
 const PetDetails = () => {
     const { user } = useContext(AuthContext);
+    const loadPetDetails = useLoaderData();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     // const axiosPublic = UseAxiosPublic();
     const axiosSecure = UseAxiosSecure();
-    const loadPetDetails = useLoaderData();
-    console.log(user);
-    const { register, handleSubmit } = useForm();
 
-    const onSubmit = async (data) => {
+    // console.log(user.displayName);
 
-        const addPet = {
+
+    const onsubmit = async (data) => {
+        console.log("Button Clicked");
+
+        const adoptionPet = {
             adpname: data.adpname,
             adpemail: data.adpemail,
             adpnumber: data.adpnumber,
             adpaddress: data.adpaddress,
+            adpreq: 'true',
+            owneremail: loadPetDetails.email,
+            petimage: loadPetDetails.image
+
         }
-        console.log(addPet);
+        console.log(adoptionPet);
 
-        const addPetList = await axiosSecure.patch(`/pets/${loadPetDetails._id}`, addPet);
-        console.log(addPetList.data);
-        if (addPetList.data.modifiedCount > 0) {
-
+        const addAdoptionList = await axiosSecure.post('/adoption', adoptionPet);
+        console.log(addAdoptionList.data);
+        if (addAdoptionList.data.insertedId) {
+            reset();
             Swal.fire({
                 position: "top-end",
                 icon: "success",
-                title: "Updated",
+                title: "Request Send",
                 showConfirmButton: false,
                 timer: 1500
             });
         }
+        console.log(addAdoptionList.data);
 
     }
 
@@ -55,8 +63,8 @@ const PetDetails = () => {
             </Helmet>
             <div className="pt-32 min-h-screen px-10">
                 <div className=" grid grid-cols-4 shadow-md shadow-slate-400 rounded-3xl">
-                    <div>
-                        <img className="rounded-l-3xl" src={loadPetDetails.image} alt="" />
+                    <div className="">
+                        <img className="h-full rounded-l-3xl" src={loadPetDetails.image} alt="" />
                     </div>
                     <div className="col-span-3 text-slate-800 bg-teal-50 w-full rounded-r-3xl px-5 py-3 grid" >
                         <p className="text-3xl font-extrabold">Name : {loadPetDetails.name}</p>
@@ -74,22 +82,22 @@ const PetDetails = () => {
                     </div>
                     <dialog id="my_modal_1" className="modal">
                         <div className="modal-box bg-slate-100">
-                            <form onSubmit={handleSubmit(onSubmit)}>
+                            <form onSubmit={handleSubmit(onsubmit)}>
                                 <div className="grid  gap-3 m-2">
                                     <span className="font-bold  text-slate-900 text-xl">Name</span>
-                                    <input type="text" {...register("adpname", { required: true })} defaultValue={user.email} placeholder="" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none" disabled />
+                                    <input type="text" {...register("adpname", { required: true })} defaultValue={user.displayName} placeholder="" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none" />
                                 </div>
                                 <div className="grid  gap-3 m-2">
                                     <span className="font-bold  text-slate-900 text-xl">Email</span>
-                                    <input type="text" {...register("adpemail", { required: true })} defaultValue={user.email} placeholder="" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none" disabled />
+                                    <input type="text" {...register("adpemail", { required: true })} defaultValue={user.email} placeholder="" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none" />
                                 </div>
                                 <div className="grid  gap-3 m-2">
                                     <span className="font-bold  text-slate-900 text-xl">Phone Number</span>
-                                    <input type="text" {...register("adpnumber", { required: true })} placeholder="+880" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none " />
+                                    <input type="text" {...register("adpnumber", { required: true })} placeholder="" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none" />
                                 </div>
                                 <div className="grid  gap-3 m-2">
                                     <span className="font-bold  text-slate-900 text-xl">Address</span>
-                                    <input type="text"{...register("adpaddress", { required: true })} placeholder="Home, Location" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none " />
+                                    <input type="text" {...register("adpaddress", { required: true })} placeholder="" className="p-2 px-3 rounded-lg text-xl bg-white text-slate-900 outline-none" />
                                 </div>
                                 <button className="border border-teal-800 mx-2 mt-2 py-2 px-3 rounded-lg text-slate-900 hover:bg-teal-800 hover:text-slate-100 ">SUBMIT</button>
                             </form>

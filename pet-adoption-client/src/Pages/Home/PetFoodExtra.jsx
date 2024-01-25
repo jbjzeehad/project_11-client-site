@@ -5,22 +5,22 @@ const PetFoodExtra = () => {
         <div className="mx-8 grid grid-cols-6 mb-10">
             <div className="col-span-3 grid grid-cols-3 gap-5 pt-8">
                 <div className="">
-                    <img className="rounded-3xl" src="https://i.ibb.co/KWWJ42M/food1.png" alt="1" />
+                    <img className="rounded-3xl" src="../../../public/food1.png" alt="1" />
                 </div>
                 <div className="">
-                    <img className="rounded-3xl" src="https://i.ibb.co/Sc2Kjn6/food2.png" alt="2" />
+                    <img className="rounded-3xl" src="../../../public/food2.png" alt="2" />
                 </div>
                 <div className="">
-                    <img className="rounded-3xl" src="https://i.ibb.co/0nnNcX8/food3.png" alt="3" />
+                    <img className="rounded-3xl" src="../../../public/food3.png" alt="3" />
                 </div>
                 <div className="">
-                    <img className="rounded-3xl" src="https://i.ibb.co/H70SckW/food4.png" alt="3" />
+                    <img className="rounded-3xl" src="../../../public/food4.png" alt="4" />
                 </div>
                 <div className="">
-                    <img className="rounded-3xl" src="https://i.ibb.co/fC6wgS7/food5.png" alt="3" />
+                    <img className="rounded-3xl" src="../../../public/food5.png" alt="5" />
                 </div>
                 <div className="">
-                    <img className="rounded-3xl" src="https://i.ibb.co/N1Gjf27/food60.png" alt="3" />
+                    <img className="rounded-3xl" src="../../../public/food6.png" alt="6" />
                 </div>
             </div>
             <div className="col-span-3 ml-3 pt-5 px-8">

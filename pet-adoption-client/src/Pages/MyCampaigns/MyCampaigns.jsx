@@ -7,6 +7,7 @@ import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import { MdPlayArrow } from "react-icons/md";
 import Swal from "sweetalert2";
+import { NavLink } from "react-router-dom";
 
 const MyCampaigns = () => {
     const { user } = useContext(AuthContext);
@@ -85,9 +86,9 @@ const MyCampaigns = () => {
                                         }
                                     </td>
                                     <td>
-                                        <button className="border border-yellow-800 hover:text-yellow-800 px-4 py-1 rounded-lg text-sm" >
+                                        <NavLink to={`/dashboard/updatemycampaigns/${donations._id}`}>  <button className="border border-yellow-800 hover:text-yellow-800 px-4 py-1 rounded-lg text-sm" >
                                             <FaRegEdit></FaRegEdit>
-                                        </button>
+                                        </button></NavLink>
                                     </td>
 
                                 </tr>

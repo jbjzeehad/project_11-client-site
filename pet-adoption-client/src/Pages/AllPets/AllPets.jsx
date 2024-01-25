@@ -17,6 +17,49 @@ const AllPets = () => {
     });
 
 
+    const handleAdoption = async (pet) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Adopted",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Ok"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const updatePet = {
+
+                    name: pet.name,
+                    age: pet.age,
+                    category: pet.category,
+                    location: pet.location,
+                    shortdescription: pet.shortdescription,
+                    longdescription: pet.longdescription,
+                    image: pet.image,
+                    time: pet.time,
+                    email: pet.email,
+                    adopted: "true"
+
+                }
+                const updated = axiosSecure.put(`/pets/${pet._id}`, updatePet)
+                    .then(res => {
+                        console.log(updated.data);
+                        if (res.data.modifiedCount > 0) {
+                            refetch();
+                            Swal.fire({
+                                position: "top-end",
+                                icon: "success",
+                                title: 'Adopted Confirm',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        }
+                    })
+            }
+        })
+
+    }
 
     const handleDeletePet = pet => {
         Swal.fire({
@@ -72,6 +115,7 @@ const AllPets = () => {
                                     <td>{pets.name}</td>
                                     <td>{pets.category}</td>
                                     <td>{pets.adopted === 'false' ? "Not Adopted" : "Adopted"}</td>
+
                                     <td>{pets.adopted === 'false' ? <button onClick={() => { handleAdoption(pets) }} className="border border-teal-800 hover:text-teal-800 px-4 py-1 rounded-lg text-sm" >
                                         <FaPaw></FaPaw>
                                     </button> :
