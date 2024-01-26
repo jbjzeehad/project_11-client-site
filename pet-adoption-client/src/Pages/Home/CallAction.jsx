@@ -6,13 +6,13 @@ const CallAction = () => {
         <div className="mx-8 grid grid-cols-5 mb-10">
             <div className="col-span-3 grid grid-rows-2 grid-flow-col gap-5">
                 <div className=" row-span-2 ">
-                    <img className="rounded-3xl" src="../../../public/petad1.png" alt="1" />
+                    <img className="rounded-3xl" src="https://i.ibb.co/LR7YKNr/petad1.png" alt="1" />
                 </div>
                 <div className="row-span-1">
-                    <img className="rounded-3xl" src="../../../public/petad2.png" alt="2" />
+                    <img className="rounded-3xl" src="https://i.ibb.co/fX5yJk7/petad2.png" alt="2" />
                 </div>
                 <div className="row-span-1">
-                    <img className="rounded-3xl" src="../../../public/petad3.png" alt="3" />
+                    <img className="rounded-3xl" src="https://i.ibb.co/yscLhXm/petad3.png" alt="3" />
                 </div>
             </div>
             <div className="col-span-2 ml-3 pt-5 px-10 grid">

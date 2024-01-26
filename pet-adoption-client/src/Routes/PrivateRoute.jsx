@@ -1,10 +1,10 @@
 
-import useAuth from "../Hooks/useAuth";
+import UseAuthor from "../Hooks/UseAuthor";
 import { Navigate, useLocation } from "react-router-dom";
 
 
 const PrivateRoute = ({ children }) => {
-    const { user, loading } = useAuth();
+    const { user, loading } = UseAuthor();
     const location = useLocation();
     if (loading) {
         return <progress className="progress w-full"></progress>

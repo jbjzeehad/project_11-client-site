@@ -16,7 +16,7 @@ const DonateSection = () => {
             <div className="grid grid-cols-2 mt-10 gap-5">
                 <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
                     <div>
-                        <img className="rounded-l-3xl" src="../../../public/don1.png" alt="" />
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/qyHjKx1/don1.png" alt="" />
                     </div>
                     <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
                         <p className="text-2xl font-extrabold ">Paws for a Cause</p>
@@ -28,7 +28,7 @@ const DonateSection = () => {
                 </div>
                 <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
                     <div>
-                        <img className="rounded-l-3xl" src="../../../public/don2.png" alt="" />
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/9yH19Tn/don2.png" alt="" />
                     </div>
                     <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
                         <p className="text-2xl font-extrabold ">Give a Paw Up</p>
@@ -40,7 +40,7 @@ const DonateSection = () => {
                 </div>
                 <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
                     <div>
-                        <img className="rounded-l-3xl" src="../../../public/don3.png" alt="" />
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/tsyDyTk/don3.png" alt="" />
                     </div>
                     <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
                         <p className="text-2xl font-extrabold ">Pet Rescue Mission</p>
@@ -52,7 +52,7 @@ const DonateSection = () => {
                 </div>
                 <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
                     <div>
-                        <img className="rounded-l-3xl" src="../../../public/don4.png" alt="" />
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/thg9Wqx/campaign1.png" alt="" />
                     </div>
                     <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
                         <p className="text-2xl font-extrabold ">Sweet Homes</p>

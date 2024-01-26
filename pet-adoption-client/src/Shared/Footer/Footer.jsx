@@ -21,7 +21,7 @@ const Footer = () => {
                     <p>Cookie Policy</p>
                 </div>
                 <div className="flex items-center justify-center gap-3">
-                    <img className="w-10" src="../../../public/petlogo.png" alt="" />
+                    <img className="w-10" src="https://i.ibb.co/bdCZb5J/petlogo.png" alt="" />
                     <div className="flex">
                         <input className="bg-slate-100 rounded-l-lg p-2 text-slate-900" type="text" />
                         <button className="bg-teal-800 border-2 rounded-r-lg p-2 text-slate-100 font-bold text-xl ">Subscribe</button>

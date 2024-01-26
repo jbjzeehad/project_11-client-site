@@ -49,7 +49,7 @@ const DonationCamp = () => {
 
                         )
                     }
-                    <div className=" grid grid-cols-3 shadow-md shadow-slate-400 rounded-3xl">
+                    {/* <div className=" grid grid-cols-3 shadow-md shadow-slate-400 rounded-3xl">
                         <div>
                             <img className=" rounded-l-3xl" src="https://i.ibb.co/k0DRKpv/dog1.png" alt="" />
                         </div>
@@ -62,8 +62,8 @@ const DonationCamp = () => {
                             </div>
                             <button className="w-full rounded-lg border border-teal-800 hover:border-2 text-base font-bold text-slate-800 px-3 py-1">View Details</button>
                         </div>
-                    </div>
-                    <div className=" grid grid-cols-3 shadow-md shadow-slate-400 rounded-3xl">
+                    </div> */}
+                    {/* <div className=" grid grid-cols-3 shadow-md shadow-slate-400 rounded-3xl">
                         <div>
                             <img className=" rounded-l-3xl" src="https://i.ibb.co/5BhfV28/cat1.png" alt="" />
                         </div>
@@ -76,7 +76,7 @@ const DonationCamp = () => {
                             </div>
                             <button className="w-full rounded-lg border border-teal-800 hover:border-2 text-base font-bold text-slate-800 px-3 py-1">View Details</button>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

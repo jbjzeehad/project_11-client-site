@@ -26,7 +26,7 @@ const Banner = () => {
                 className="mySwiper rounded-3xl"
             >
                 <SwiperSlide>
-                    <img src="../../../public/banner4.png" alt="" />
+                    <img src="https://i.ibb.co/R024GS4/banner4.png" alt="" />
                     <div className='absolute top-1/4 p-10 left-20'  >
                         <h3 className='text-8xl text-slate-100 font-extrabold'>Start Your <br />Adoption<br /> Journey Now</h3>
                         {
@@ -39,21 +39,21 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="../../../public/banner1.png" alt="" />
+                    <img src="https://i.ibb.co/HVKz0Wx/banner1.png" alt="" />
                     <div className='absolute top-1/4 p-10 right-20'  >
                         <h3 className='text-8xl text-slate-100 font-extrabold text-right'>Find the <br />Right<br />Pet for You</h3>
                         <p className='mt-6 text-3xl ml-20 text-slate-100 text-right'>Take our interactive new quiz to find<br /> the perfect pet to adopt</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="../../../public/banner3.png" alt="" />
+                    <img src="https://i.ibb.co/jL0Scyy/banner3.png" alt="" />
                     <div className='absolute top-1/4 p-10 right-20 '  >
                         <h3 className='text-8xl text-slate-100 font-extrabold text-right'>Every Pet <br />Deserves<br /> a Home</h3>
                         <p className='mt-6 text-3xl ml-20 text-slate-100 text-right'>Adopt a Pet Today</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="../../../public/banner2.png" alt="" />
+                    <img src="https://i.ibb.co/6XkyJCj/banner2.png" alt="" />
                     <div className='absolute bottom-1/4 px-10 pt-16 left-20'  >
                         <h3 className='text-8xl text-slate-100 font-extrabold'>Make a <br />Donation <br />for Pet<br /> Happiness</h3>
                     </div>
@@ -65,7 +65,7 @@ const Banner = () => {
                     <button className=' text-2xl text-slate-900 font-semibold hover:text-teal-800'>Find a Cat</button>
                     <button className='border-l-2 text-2xl text-slate-900 font-semibold border-teal-900 hover:text-teal-800'>Find a Rabbit</button>
                     <div className=' flex justify-center '>
-                        <img className="w-12 animate-pulse " src="../../../public/petlogo.png" alt="" />
+                        <img className="w-12 animate-pulse " src="https://i.ibb.co/bdCZb5J/petlogo.png" alt="" />
                     </div>
                     <button className='border-r-2 text-2xl text-slate-900 font-semibold border-teal-900 hover:text-teal-800'>Find a Dog</button>
                     <button className=' text-2xl text-slate-900 font-semibold hover:text-teal-800'>Find Others</button>

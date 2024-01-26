@@ -1,26 +1,41 @@
 import { Helmet } from "react-helmet-async";
 import { MdEmail } from "react-icons/md";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import { Parallax } from "react-parallax";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import { FaLock } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
-import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
-import { useQuery } from "@tanstack/react-query";
 
 
 const Login = () => {
     /////////////////////////////////////ban check
+    const loadUser = useLoaderData([]);
 
     //////////////////////////////////////
     const [loginError, setLoginError] = useState('');
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn, logOut } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    /////////////////////////////////////////////////
 
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                console.log('logout user');
+                navigate('/');
+                Swal.fire({
+                    position: "top-end",
+                    icon: "warning",
+                    title: "You are Banned",
+                    timer: 1500
+                });
+            })
+            .catch(error => console.log(error));
+    }
+    //////////////////////////////////////////
 
 
     const from = location.state?.from?.pathname || '/';
@@ -35,6 +50,12 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+
+                // //////////////////////////
+                const logUser = loadUser.filter(myemail => myemail.email === user.email);
+                if (logUser[0].role === 'ban') {
+                    handleLogOut();
+                }
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
@@ -52,7 +73,7 @@ const Login = () => {
     }
 
 
-    const bgimg = "https://i.ibb.co/2ySCgMQ/banner3.png";
+    const bgimg = "https://i.ibb.co/jL0Scyy/banner3.png";
 
     return (
         <>
@@ -98,13 +119,13 @@ const Login = () => {
                 <div>
                     <div className="col-span-3 grid grid-rows-2 grid-flow-col gap-5">
                         <div className=" row-span-2 ">
-                            <img className="rounded-3xl" src="https://i.ibb.co/Fh5FcN8/petad1.png" alt="1" />
+                            <img className="rounded-3xl" src="https://i.ibb.co/LR7YKNr/petad1.png" alt="1" />
                         </div>
                         <div className="row-span-1">
-                            <img className="rounded-3xl" src="https://i.ibb.co/W0qxYht/petad2.png" alt="2" />
+                            <img className="rounded-3xl" src="https://i.ibb.co/fX5yJk7/petad2.png" alt="2" />
                         </div>
                         <div className="row-span-1">
-                            <img className="rounded-3xl" src="https://i.ibb.co/nL6RfbL/petad3.png" alt="3" />
+                            <img className="rounded-3xl" src="https://i.ibb.co/yscLhXm/petad3.png" alt="3" />
                         </div>
                     </div>
                 </div>

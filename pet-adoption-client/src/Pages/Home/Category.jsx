@@ -16,7 +16,7 @@ const Category = () => {
             </div>
             <div className="grid grid-cols-3 my-8 gap-5">
                 <div className="relative shadow-lg shadow-slate-500 rounded-3xl">
-                    <img className="rounded-3xl" src="../../../public/card1.png" alt="" />
+                    <img className="rounded-3xl" src="https://i.ibb.co/NjgMrZs/card1.png" alt="" />
                     <div className="absolute bottom-0 text-slate-800 bg-teal-50 w-full rounded-3xl grid justify-center text-center rounded-t-full py-3">
                         <p className="text-3xl font-extrabold text-teal-900">Bruce</p>
                         <p className="font-bold">3 years</p>
@@ -27,7 +27,7 @@ const Category = () => {
                 </div>
                 <div>
                     <div className="relative shadow-lg shadow-slate-500 rounded-3xl">
-                        <img className="rounded-3xl" src="../../../public/card2.png" alt="" />
+                        <img className="rounded-3xl" src="https://i.ibb.co/wQh0FQh/chole.png" alt="" />
                         <div className="absolute bottom-0 text-slate-800 bg-teal-50 w-full rounded-3xl grid justify-center text-center rounded-t-full py-3">
                             <p className="text-3xl font-extrabold text-teal-900">Chole</p>
                             <p className="font-bold">2 Years</p>
@@ -39,7 +39,7 @@ const Category = () => {
                 </div>
                 <div>
                     <div className="relative shadow-lg shadow-slate-500 rounded-3xl">
-                        <img className="rounded-3xl" src="../../../public/card3.png" alt="" />
+                        <img className="rounded-3xl" src="https://i.ibb.co/HxVskCG/card3.png" alt="" />
                         <div className="absolute bottom-0 text-slate-800 bg-teal-50 w-full rounded-3xl rounded-t-full grid justify-center py-3 text-center">
                             <p className="text-3xl font-extrabold text-teal-900">Bella</p>
                             <p className="font-bold">2 Years</p>

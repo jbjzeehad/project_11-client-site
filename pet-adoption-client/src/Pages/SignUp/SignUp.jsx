@@ -57,7 +57,7 @@ const SignUp = () => {
 
 
 
-    const img1 = 'https://i.ibb.co/V9X4225/banner1.png';
+    const img1 = 'https://i.ibb.co/HVKz0Wx/banner1.png';
 
     return (
         <>
