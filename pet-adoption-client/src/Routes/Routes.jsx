@@ -22,6 +22,7 @@ import PetDetails from "../Pages/PetListing/PetDetails";
 import DonationCampDetails from "../Pages/DonationCamp/DonationCampDetails";
 import UpdateMyPets from "../Pages/MyPets/UpdateMyPets";
 import UpdateMyCampaigns from "../Pages/MyCampaigns/UpdateMyCampaigns";
+import EducationalWorkshop from "../Pages/EducationalWorkshop/EducationalWorkshop";
 
 
 export const router = createBrowserRouter([
@@ -52,6 +53,10 @@ export const router = createBrowserRouter([
                 path: "dtncampdetails/:id",
                 element: <DonationCampDetails></DonationCampDetails>,
                 loader: ({ params }) => fetch(`https://pet-adoption-server-one.vercel.app/donations/${params.id}`)
+            },
+            {
+                path: "education",
+                element: <EducationalWorkshop></EducationalWorkshop>
             },
             {
                 path: "login",

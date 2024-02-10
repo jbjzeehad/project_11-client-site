@@ -4,6 +4,7 @@ import { FiHome } from "react-icons/fi";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { PiGraduationCapBold } from "react-icons/pi";
 
 
 const Navbar = () => {
@@ -29,6 +30,7 @@ const Navbar = () => {
                     <NavLink to='/'><button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><FiHome></FiHome>Home</button></NavLink>
                     <NavLink to='/petlist'><button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><FaPaw></FaPaw>Pet Listing</button></NavLink>
                     <NavLink to="/dtncamp">  <button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><BiDonateHeart></BiDonateHeart>Donation</button></NavLink>
+                    <NavLink to="/education"><button className="flex items-center gap-2 hover:border-b-4 focus:border-b-4 rounded-sm border-teal-800  text-2xl font-bold text-teal-700 p-2"><PiGraduationCapBold></PiGraduationCapBold>Education</button></NavLink>
                 </div>
                 <div className="col-span-4 flex items-center justify-end mr-8">
                     {

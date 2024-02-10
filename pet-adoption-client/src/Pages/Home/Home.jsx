@@ -5,6 +5,7 @@ import Category from "./Category";
 import PetFoodExtra from "./PetFoodExtra";
 import DonateSection from "./DonateSection";
 import AboutUs from "./AboutUs";
+import Education from "./Education";
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
             <PetFoodExtra></PetFoodExtra>
             <DonateSection></DonateSection>
             <AboutUs></AboutUs>
+            <Education></Education>
         </div>
     );
 };
