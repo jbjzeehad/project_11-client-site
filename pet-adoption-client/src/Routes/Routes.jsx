@@ -23,6 +23,10 @@ import DonationCampDetails from "../Pages/DonationCamp/DonationCampDetails";
 import UpdateMyPets from "../Pages/MyPets/UpdateMyPets";
 import UpdateMyCampaigns from "../Pages/MyCampaigns/UpdateMyCampaigns";
 import EducationalWorkshop from "../Pages/EducationalWorkshop/EducationalWorkshop";
+import CreateCourse from "../Pages/CreateCourse/CreateCourse";
+import MyCourses from "../Pages/MyCourses/MyCourses";
+import EnrolledCourses from "../Pages/EnrolledCourses/EnrolledCourses";
+import AllCourses from "../Pages/AllCourses/AllCourses";
 
 
 export const router = createBrowserRouter([
@@ -111,6 +115,18 @@ export const router = createBrowserRouter([
                 path: 'adoptionreq',
                 element: <AdoptionReq></AdoptionReq>
             },
+            {
+                path: 'createcourse',
+                element: <CreateCourse></CreateCourse>
+            },
+            {
+                path: 'mycourses',
+                element: <MyCourses></MyCourses>
+            },
+            {
+                path: 'enrolledcourses',
+                element: <EnrolledCourses></EnrolledCourses>
+            },
             //only admin routes
             {
                 path: 'allusers',
@@ -129,6 +145,10 @@ export const router = createBrowserRouter([
                 element: <AllDonation></AllDonation>
                 // element: <AdminRoute><AllDonation></AllDonation></AdminRoute>
 
+            },
+            {
+                path: 'allcourses',
+                element: <AllCourses></AllCourses>
             }
         ]
     }

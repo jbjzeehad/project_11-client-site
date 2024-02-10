@@ -17,7 +17,7 @@ const Education = () => {
             <div className="grid grid-cols-2 mt-10 gap-5">
                 <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
                     <div>
-                        <img className="rounded-l-3xl" src="https://i.ibb.co/qyHjKx1/don1.png" alt="" />
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/C0YxQ6Q/edu4.png" alt="" />
                     </div>
                     <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
                         <p className="text-2xl font-extrabold ">Paws & Learn</p>
@@ -29,7 +29,7 @@ const Education = () => {
                 </div>
                 <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
                     <div>
-                        <img className="rounded-l-3xl" src="https://i.ibb.co/9yH19Tn/don2.png" alt="" />
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/LJGFjHW/edu3.png" alt="" />
                     </div>
                     <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
                         <p className="text-2xl font-extrabold ">Adopt & Thrive</p>
@@ -41,7 +41,7 @@ const Education = () => {
                 </div>
                 <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
                     <div>
-                        <img className="rounded-l-3xl" src="https://i.ibb.co/tsyDyTk/don3.png" alt="" />
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/VYyXtgb/education2.png" alt="" />
                     </div>
                     <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
                         <p className="text-2xl font-extrabold ">Training Tails</p>
@@ -53,7 +53,7 @@ const Education = () => {
                 </div>
                 <div className="grid grid-cols-2 shadow-md shadow-slate-400 rounded-3xl">
                     <div>
-                        <img className="rounded-l-3xl" src="https://i.ibb.co/thg9Wqx/campaign1.png" alt="" />
+                        <img className="rounded-l-3xl" src="https://i.ibb.co/VqbNbN4/petedu4.png" alt="" />
                     </div>
                     <div className=" text-slate-800 bg-teal-50 w-full rounded-r-3xl p-3">
                         <p className="text-2xl font-extrabold ">Pet Care 101</p>
