@@ -27,7 +27,11 @@ import CreateCourse from "../Pages/CreateCourse/CreateCourse";
 import MyCourses from "../Pages/MyCourses/MyCourses";
 import EnrolledCourses from "../Pages/EnrolledCourses/EnrolledCourses";
 import AllCourses from "../Pages/AllCourses/AllCourses";
+import UpdateMyCourses from "../Pages/MyCourses/UpdateMyCourses";
 
+
+
+//////    http://localhost:5000
 
 export const router = createBrowserRouter([
     {
@@ -46,7 +50,7 @@ export const router = createBrowserRouter([
             {
                 path: "petdetails/:id",
                 element: <PetDetails></PetDetails>,
-                loader: ({ params }) => fetch(`https://pet-adoption-server-one.vercel.app/pets/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/pets/${params.id}`)
 
             },
             {
@@ -56,7 +60,7 @@ export const router = createBrowserRouter([
             {
                 path: "dtncampdetails/:id",
                 element: <DonationCampDetails></DonationCampDetails>,
-                loader: ({ params }) => fetch(`https://pet-adoption-server-one.vercel.app/donations/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/donations/${params.id}`)
             },
             {
                 path: "education",
@@ -65,7 +69,7 @@ export const router = createBrowserRouter([
             {
                 path: "login",
                 element: <Login></Login>,
-                loader: () => fetch('https://pet-adoption-server-one.vercel.app/users')
+                loader: () => fetch('http://localhost:5000/users')
             },
             {
                 path: "signup",
@@ -76,7 +80,7 @@ export const router = createBrowserRouter([
     {
         path: 'dashboard',
         element: <DashBoard></DashBoard>,
-        loader: () => fetch('https://pet-adoption-server-one.vercel.app/users'),
+        loader: () => fetch('http://localhost:5000/users'),
         // <PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
         children: [
             //all user routes
@@ -91,7 +95,7 @@ export const router = createBrowserRouter([
             {
                 path: 'updatemypets/:id',
                 element: <UpdateMyPets></UpdateMyPets>,
-                loader: ({ params }) => fetch(`https://pet-adoption-server-one.vercel.app/pets/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/pets/${params.id}`)
             },
             {
                 path: 'mydonation',
@@ -105,7 +109,7 @@ export const router = createBrowserRouter([
             {
                 path: 'updatemycampaigns/:id',
                 element: <UpdateMyCampaigns></UpdateMyCampaigns>,
-                loader: ({ params }) => fetch(`https://pet-adoption-server-one.vercel.app/donations/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/donations/${params.id}`)
             },
             {
                 path: 'createcampaign',
@@ -122,6 +126,11 @@ export const router = createBrowserRouter([
             {
                 path: 'mycourses',
                 element: <MyCourses></MyCourses>
+            },
+            {
+                path: 'updatemycourses/:id',
+                element: <UpdateMyCourses></UpdateMyCourses>,
+                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
             },
             {
                 path: 'enrolledcourses',

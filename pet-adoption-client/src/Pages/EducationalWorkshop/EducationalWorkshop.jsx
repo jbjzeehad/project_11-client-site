@@ -16,10 +16,6 @@ const EducationalWorkshop = () => {
         }
     });
 
-
-
-
-
     return (
         <>
             <Helmet><title>Paw | Education</title></Helmet>
