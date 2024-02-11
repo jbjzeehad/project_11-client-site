@@ -114,7 +114,7 @@ const AdoptionReq = () => {
                                             adoption.adpreq === 'true' ?
                                                 <button onClick={() => handleSelectAdp(adoption)} className="border border-teal-800 hover:text-teal-800 px-4 py-1 rounded-lg text-base" >
                                                     <TiTick></TiTick>
-                                                </button> : <button disabled className="border border-teal-800 px-4 py-1 rounded-lg text-teal-800" >
+                                                </button> : <button disabled className=" border-teal-800 px-4 py-1 rounded-lg text-teal-800" >
                                                     <TiTick></TiTick>
                                                 </button>}
                                     </td>

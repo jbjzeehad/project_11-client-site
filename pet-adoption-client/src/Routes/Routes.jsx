@@ -28,6 +28,7 @@ import MyCourses from "../Pages/MyCourses/MyCourses";
 import EnrolledCourses from "../Pages/EnrolledCourses/EnrolledCourses";
 import AllCourses from "../Pages/AllCourses/AllCourses";
 import UpdateMyCourses from "../Pages/MyCourses/UpdateMyCourses";
+import EducationalWorkshopDetails from "../Pages/EducationalWorkshop/EducationalWorkshopDetails";
 
 
 
@@ -65,6 +66,11 @@ export const router = createBrowserRouter([
             {
                 path: "education",
                 element: <EducationalWorkshop></EducationalWorkshop>
+            },
+            {
+                path: "education/:id",
+                element: <EducationalWorkshopDetails></EducationalWorkshopDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
             },
             {
                 path: "login",
