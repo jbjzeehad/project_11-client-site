@@ -16,12 +16,7 @@ const EducationalWorkshopDetails = () => {
     const { user } = useContext(AuthContext);
     const loadCourseDetails = useLoaderData();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    // const axiosPublic = UseAxiosPublic();
     const axiosSecure = UseAxiosSecure();
-
-    // console.log(user.displayName);
-
-
     const onsubmit = async (data) => {
         console.log("Button Clicked");
 
@@ -52,10 +47,6 @@ const EducationalWorkshopDetails = () => {
         console.log(addEnrolledList.data);
 
     }
-
-
-
-
 
     return (
         <>

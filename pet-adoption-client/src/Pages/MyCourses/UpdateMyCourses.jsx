@@ -54,14 +54,7 @@ const UpdateMyCourses = () => {
             }
         }
         console.log(res.data);
-
     }
-
-
-
-
-
-
 
     return (
         <div>
@@ -120,9 +113,6 @@ const UpdateMyCourses = () => {
                                 )}
                             </div>
                         </div>
-
-
-
                         <div className="col-span-2  flex items-center gap-5 mb-3 ">
                             <CgDetailsMore className="text-4xl text-teal-800"></CgDetailsMore>
                             <textarea {...register("outline", { required: true })} className="w-full h-16 py-3 border-b-2 focus:border-b-4 outline-none text-slate-900 text-2xl font-medium bg-teal-50  border-teal-800 placeholder:text-slate-900" defaultValue={loadedAllCourses.outline} placeholder="Course Outline"></textarea>
@@ -131,7 +121,6 @@ const UpdateMyCourses = () => {
                             )}
                         </div>
                     </div>
-
                     <div className="">
                         <input className="w-full py-2 px-3 text-2xl text-slate-100 rounded-lg font-bold hover:border-teal-800 hover:bg-transparent border-2 border-teal-800 hover:text-teal-700 bg-teal-800" type="submit" value="Submit" />
                     </div>

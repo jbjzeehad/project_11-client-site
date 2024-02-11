@@ -60,10 +60,6 @@ const AllCourses = () => {
 
     }
 
-
-
-
-
     const handleDeletecourse = course => {
         Swal.fire({
             title: "Are you sure?",
@@ -124,8 +120,6 @@ const AllCourses = () => {
                                             <FaUserGraduate></FaUserGraduate>
                                         </button>
                                     }
-
-
                                     </td>
                                     <td>
                                         <NavLink to={`/dashboard/updatemycourses/${courses._id}`}>  <button className="border border-yellow-800 hover:text-yellow-800 px-4 py-1 rounded-lg text-sm" >
@@ -141,7 +135,6 @@ const AllCourses = () => {
                                 </tr>
 
                             )
-
 
                         }
 

@@ -44,18 +44,8 @@ const EducationalWorkshop = () => {
 
                                 </div>
                             </div>
-
-
-
                         )
                     }
-
-
-
-
-
-
-
                 </div>
             </div>
         </>

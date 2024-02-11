@@ -54,15 +54,7 @@ const CreateCourse = () => {
             }
         }
         console.log(res.data);
-
     }
-
-
-
-
-
-
-
     return (
         <div>
             <div className="mx-10 mt-3">

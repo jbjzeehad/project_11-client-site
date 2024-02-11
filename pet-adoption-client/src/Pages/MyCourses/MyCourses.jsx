@@ -61,12 +61,7 @@ const MyCourses = () => {
                     })
             }
         })
-
     }
-
-
-
-
 
     const handleDeletecourse = course => {
         Swal.fire({
@@ -128,8 +123,6 @@ const MyCourses = () => {
                                             <FaUserGraduate></FaUserGraduate>
                                         </button>
                                     }
-
-
                                     </td>
                                     <td>
                                         <NavLink to={`/dashboard/updatemycourses/${courses._id}`}>  <button className="border border-yellow-800 hover:text-yellow-800 px-4 py-1 rounded-lg text-sm" >
@@ -140,15 +133,10 @@ const MyCourses = () => {
                                         <button onClick={() => handleDeletecourse(courses)} className="border border-red-500 hover:text-red-500 px-4 py-1 rounded-lg text-sm " >
                                             <MdDelete></MdDelete>
                                         </button>
-
                                     </td>
                                 </tr>
-
                             )
-
-
                         }
-
                     </tbody>
                     {/* foot */}
                     <tfoot className="bg-slate-100 text-sm rounded-2xl">

@@ -47,11 +47,6 @@ const EnrolledCourses = () => {
         })
     }
 
-
-
-
-
-
     const handleDeleteCourse = course => {
         Swal.fire({
             title: "Are you sure?",
@@ -77,9 +72,6 @@ const EnrolledCourses = () => {
             }
         });
     }
-
-
-
     return (
         <>
             <div className="">
@@ -129,17 +121,8 @@ const EnrolledCourses = () => {
                                     }
                                     </td>
                                 </tr>
-
-
-
                             )
                         }
-
-
-
-
-
-
                     </tbody>
                     {/* foot */}
                     <tfoot className="bg-slate-100 text-sm rounded-2xl">
